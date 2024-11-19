@@ -1,38 +1,136 @@
+/* General App Styles */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark gray for text */
+  background-color: #f9f9f9; /* Light background for the app */
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Actor Name and Known For Section */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Deep blue-gray for main headers */
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 1.8rem;
+  color: #34495e; /* Medium blue-gray for subheaders */
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 5px 0;
+}
+
+span {
+  display: block;
+  margin-bottom: 10px;
+  color: #555; /* Softer gray for small details */
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Pagination Buttons */
+.pagination {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #3498db; /* Blue button */
   color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination button:active {
+  background-color: #1f618d; /* Even darker blue when active */
+}
+
+/* Image Grid */
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for larger images */
+  gap: 15px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.image-item img {
+  width: 100%; /* Fit grid cell */
+  height: 200px; /* Fixed height for uniformity */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  object-fit: cover; /* Crop images nicely */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+/* Known Movies Section */
+.known-movies {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.known-movies div {
+  margin-bottom: 15px;
+}
+
+.known-movies h3 {
+  color: #1abc9c; /* Teal for movie titles */
+  font-weight: bold;
+}
+
+.known-movies i {
+  color: #7f8c8d; /* Gray for additional details */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .pagination button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
