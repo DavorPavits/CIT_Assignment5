@@ -19,9 +19,10 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.card{
+.card{  
+    margin:0px 750px 0px 750px;
     flex: 1;
-    flex-basis: 300px;
+    flex-basis: 100px;
     flex-grow: 0;
     height: 440px;
     background: #fff;
@@ -192,7 +193,22 @@ footer a {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 5%;
-  }
+}
+
+.card-movie{  
+  border: 1px solid #ccc; /* Optional: add a border */
+  padding: 10px; /* Optional: add some padding */
+  width: 200px; /* Set a fixed width for the cards */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+  margin-bottom: 20px; /* Space below each card */
+}
+
+
+
+.known_for{
+  display: inline-block;
+  column-count: auto;
+}
 
 
 h2 {
@@ -232,4 +248,8 @@ p {
 .info span {
     margin-left: 5px; /* Space between elements */
     color: #666; /* Lighter color for the release date */
+}
+
+.load {
+  margin-top: 10px;
 }
