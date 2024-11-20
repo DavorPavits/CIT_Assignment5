@@ -24,7 +24,7 @@ function ImagesFor({currId}){
       }, [options, id]);
     
     
-      const baseUrl = 'https://image.tmdb.org/t/p/w45'
+      const baseUrl = 'https://image.tmdb.org/t/p/w200'
       return (
         <div className="image-container">
             {profiles?.map((p ,i)=> (
