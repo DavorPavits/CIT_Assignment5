@@ -21,13 +21,13 @@ function ImagesFor({currId}){
           .then(res => res.json())
           .then(profiles => setProfiles(profiles.profiles))
           .catch(err=>console.log(err))
-      }, [options, id]);
+      }, [id]);
     
     
       const baseUrl = 'https://image.tmdb.org/t/p/w200'
       return (
         <div className="image-container">
-            {profiles?.map((p ,i)=> (
+            {profiles?.slice(0, 4).map((p ,i)=> (
                 <div key={i} className="image-item">
                     <img 
                     key={p.file_path}
