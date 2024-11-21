@@ -31,7 +31,7 @@ function Main(){
         const fullUrl = url + query + searchTerm.toLowerCase();
         fetch(fullUrl , options)
         .then(res => res.json())
-        .then(data => setData(data.results))
+        .then(data =>setData(data.results))
         .catch(err=>console.log(err))
     }, [searchTerm]);
     
